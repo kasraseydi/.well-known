@@ -1,16 +1,119 @@
 <!DOCTYPE html>
-<html lang="en"><head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="utf-8">
-    <title>Kasra Seydi - PRIVATE</title>
-<body style="background-color: #1d2026;">
-      </div></header>
-    <section>
-      <div>
-        <h1 style="color: red;font-family: arial;text-align: center;" >This Pages Data is Private!</h1>
-      <h2 style="color: aliceblue;font-family: arial;text-align: center;" >Return to The <a style="text-decoration: underline;color: #0e87f9;" href="https://kasraseydi.github.io/">Hub</a></h2>
-      <p style="color: #2e323b;text-align: center;">ERR TYPE: 404_NOACCESS</p>
-      </div>
-    </section> 
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Access Denied</title>
+  <style>
+    :root {
+      --bg-dark: rgb(32, 36, 43);
+      --text-primary: rgb(65, 133, 244);
+      --accent: rgb(14, 135, 249);
+      --alert-red: #ff2e2e;
+      --muted: #5f6368;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      color: var(--text-primary);
+      font-family: 'Courier New', monospace;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+      padding: 0 20px;
+    }
+
+    .lock-icon {
+      width: 64px;
+      height: 64px;
+      fill: red;
+      margin-bottom: 20px;
+    }
+
+    .glitch {
+      animation: glitch 1s infinite;
+    }
+
+    @keyframes glitch {
+      0%   { filter: drop-shadow(2px 0 red) drop-shadow(-2px 0 blue); }
+      20%  { filter: drop-shadow(-2px 0 red) drop-shadow(2px 0 blue); }
+      40%  { filter: drop-shadow(2px 2px red) drop-shadow(-2px -2px blue); }
+      60%  { filter: drop-shadow(-2px -2px red) drop-shadow(2px 2px blue); }
+      80%  { filter: none; }
+      100% { filter: drop-shadow(2px 0 red) drop-shadow(-2px 0 blue); }
+    }
+
+    h1 {
+      color: var(--alert-red);
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      animation: glitch 1s infinite;
+    }
+
+    .home-btn {
+      display: inline-block;
+      background: transparent;
+      border: 2px solid var(--alert-red);
+      color: var(--alert-red);
+      padding: 10px 20px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.3s;
+      text-decoration: none;
+      margin-bottom: 12px;
+      border-radius: 6px;
+    }
+
+    .home-btn:hover {
+      background-color: red;
+      color: var(--bg-dark);
+    }
+
+    .error-type {
+      color: var(--muted);
+      font-size: 0.9rem;
+      opacity: 0.6;
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      .home-btn {
+        font-size: 0.95rem;
+        padding: 8px 16px;
+      }
+
+      .error-type {
+        font-size: 0.8rem;
+      }
+
+      .lock-icon {
+        width: 48px;
+        height: 48px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- SVG Lock Icon with Glitch -->
+  <svg class="lock-icon glitch" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <path d="M5 22h14a2 2 0 0 0 2-2v-9a2 2 0 0 0-2-2h-2V7A5 5 0 0 0 7 7v2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2zm7-4.5a2 2 0 1 1 2-2 2 2 0 0 1-2 2zM9 9V7a3 3 0 0 1 6 0v2H9z"/>
+  </svg>
+
+  <h1>ACCESS DENIED</h1>
+
+  <a class="home-btn" href="/">Go Back Home</a>
 </body>
 </html>
